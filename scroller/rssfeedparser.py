@@ -5,13 +5,17 @@ import json
 
 
 def parse(url):
+    print("Fetching RSS content from: " + url)
     d = feedparser.parse(url)
-    rssTitles = {}
+    print("Received " + len(d['entries']) + " items. Processing...")
+    rssTitles = []
     for post in d.entries:
-        print(post.title)
+        print("Adding RSS post title: " + post.title)
         title = {"text": post.title, "color": "[0,0,0,0]", "blink": "false", "show": "true"}
-        title = json.loads(title)
-        rssTitles.append(title)
+        titlecontent = json.dumps(title)
+        print("json:")
+        print(titlecontent)
+        rssTitles.append(titlecontent)
     return rssTitles
 
 def save_rssTitles(rssTitles):
