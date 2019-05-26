@@ -9,12 +9,6 @@ local speed
 
 local M = {}
 
-node.event("content_update", function(filename, file)
-    if filename == "rssTitles.json" then
-        local rssTitles = json.decode(resource.load_file(file))
-    end
-end)
-
 local content = {__myself__ = {}}
 
 local function mix_content()
@@ -156,38 +150,6 @@ function M.updated_config_json(config)
         end
     end
     print("configured config only scroller content")
-    pp(items)
-end
-
-
-function M.updated_rssTitles_json(rssTitles)
-    print("starting updated_rssTitles_json block")
-    local config = json.decode(resource.load_file "scroller/config.json")
-    font = resource.load_font(api.localized(config.font.asset_name))
-    color = config.color
-    speed = config.speed
-    local RSSJSON = json.decode(resource.load_file "scroller/rssTitles.json")
-
-    content.__myself__ = {}
-    local items = content.__myself__
-    for idx = 1, #RSSJSON.texts do
-        local item = RSSJSON.texts[idx]
-        print(item)
-        local color
-        if item.color.a ~= 0 then
-            color = item.color
-        end
-    
-        -- 'show' either absent or true?
-        if item.show ~= false then
-            items[#items+1] = {
-                text = item.text,
-                blink = item.blink,
-                color = color,
-            }
-        end
-    end
-    print("configured rss scroller content")
     pp(items)
 end
 
