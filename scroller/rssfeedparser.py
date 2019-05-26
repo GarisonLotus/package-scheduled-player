@@ -26,7 +26,10 @@ def save_rssTitles(rssTitles):
     with open('/space/root/scroller/config.json', 'r') as f:
         localconfig = json.load(f)
         print("Local config Type: " + str(type(localconfig)))
-        print(str(localconfig))
+        print(str(len(localconfig)))
+        print("Texts: ")
+        print(str(localconfig['texts']))
+
 
 def filter_and_save(rssTitles):
     save_rssTitles(rssTitles)
