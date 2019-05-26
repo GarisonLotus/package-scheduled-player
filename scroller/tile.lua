@@ -139,6 +139,7 @@ function M.updated_config_json(config)
     content.__myself__ = {}
     local items = content.__myself__
     for idx = 1, #config.texts do
+        print(item)
         local item = config.texts[idx]
         local color
         if item.color.a ~= 0 then
