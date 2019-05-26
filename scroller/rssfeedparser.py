@@ -17,9 +17,6 @@ def parse(url):
     print(rssTitles)
     data = {}
     data['texts'] = rssTitles
-    data['font'] = config.font
-    data['color'] = config.color
-    data['speed'] = config.speed
     print("Data being sent to json file:")
     print(data)
     return data
