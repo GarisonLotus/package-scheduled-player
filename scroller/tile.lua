@@ -9,8 +9,12 @@ local speed
 
 local M = {}
 
-util.json_watch("rssTitles.json", function(rssTitles)
+node.event("content_update", function(filename, file)
+    if filename == "rssTitles.json" then
+        local rssTitles = json.decode(resource.load_file(file))
+    end
 end)
+
 local content = {__myself__ = {}}
 
 local function mix_content()
