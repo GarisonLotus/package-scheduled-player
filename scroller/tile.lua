@@ -9,7 +9,8 @@ local speed
 
 local M = {}
 
--- { source: { text1, text2, text3, ...} }
+util.json_watch("rssTitles.json", function(rssTitles)
+end)
 local content = {__myself__ = {}}
 
 local function mix_content()
@@ -135,6 +136,21 @@ function M.updated_config_json(config)
     local items = content.__myself__
     for idx = 1, #config.texts do
         local item = config.texts[idx]
+        local color
+        if item.color.a ~= 0 then
+            color = item.color
+        end
+
+        -- 'show' either absent or true?
+        if item.show ~= false then
+            items[#items+1] = {
+                text = item.text,
+                blink = item.blink,
+                color = color,
+            }
+        end
+    for idx = 1, #rssTitles.texts do
+        local item = rssTitles.texts[idx]
         local color
         if item.color.a ~= 0 then
             color = item.color

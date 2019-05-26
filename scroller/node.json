@@ -29,7 +29,26 @@
         ],
         "default": 100
     },
-
+    {
+        "title": "Poll interval",
+        "ui_width": 3,
+        "name": "poll_interval",
+        "type": "select",
+        "options": [
+            [2, "2 Minutes"],
+            [5, "5 Minutes (default)"],
+            [10, "10 Minutes"]
+        ],
+        "default": 5
+    },
+    {
+        "title": "RSS Feed URL",
+        "ui_width": 15,
+        "name": "rssurl",
+        "type": "string",
+        "doc_link": false,
+        "default": "https://aws.amazon.com/about-aws/whats-new/recent/feed/"
+    },
     {
         "title": "Content",
         "type": "section"

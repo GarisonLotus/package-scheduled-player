@@ -1,0 +1,5 @@
+cache-*
+tweets.json
+config.json
+*.pyc
+__pycache__
