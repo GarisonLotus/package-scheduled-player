@@ -20,13 +20,13 @@ def parse(url):
     return data
 
 def save_rssTitles(rssTitles):
-    node.write_json("rssTitles.json", rssTitles)
     with open('/space/root/scroller/config.json', 'r') as f:
         localconfig = json.load(f)
-        print("Local config Type: " + str(type(localconfig)))
-        print(str(len(localconfig)))
-        print("Texts: ")
-        print(str(localconfig['texts']))
+    print("Local config Type: " + str(type(localconfig)))
+    print(str(len(localconfig)))
+    print("Texts: ")
+    print(str(localconfig['texts']))
+    node.write_json("rssTitles.json", rssTitles)
 
 
 def filter_and_save(rssTitles):
