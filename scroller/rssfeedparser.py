@@ -1,6 +1,6 @@
 
 import feedparser
-from hosted import node
+from hosted import node, config
 import json
 
 
@@ -17,7 +17,10 @@ def parse(url):
     print(rssTitles)
     data = {}
     data['texts'] = rssTitles
-    print("here is pre loads...")
+    data['font'] = config.font
+    data['color'] = config.color
+    data['speed'] = config.speed
+    print("Data being sent to json file:")
     print(data)
     return data
 
