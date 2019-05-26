@@ -25,6 +25,3 @@ def save_rssTitles(rssTitles):
 def filter_and_save(rssTitles):
     save_rssTitles(rssTitles)
     return rssTitles
-
-
-"texts":[{"blink":false,"color":{"a":0,"b":0,"g":0,"hex":"000000","r":0,"rgba":[0,0,0,0]},"show":true,"text":"hello world"},{"blink":false,"color":{"a":0,"b":0,"g":0,"hex":"000000","r":0,"rgba":[0,0,0,0]},"show":true,"text":"test"},{"blink":false,"color":{"a":0,"b":0,"g":0,"hex":"000000","r":0,"rgba":[0,0,0,0]},"show":true,"text":"Why won't this work?"}]
