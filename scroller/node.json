@@ -1,5 +1,8 @@
 {
     "name": "Plugin: Scroller",
+    "permissions": {
+        "network": "Needs to access RSS feed"
+    },
     "options": [{
         "title": "Scroller",
         "type": "section"
