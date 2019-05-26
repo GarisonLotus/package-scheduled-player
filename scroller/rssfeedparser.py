@@ -15,8 +15,7 @@ def parse(url):
         rssTitles.append(title)
     data = {}
     data['texts'] = rssTitles
-    print("Data being sent to json file:")
-    print(data)
+    print("returning data")
     return data
 
 def save_rssTitles(rssTitles):
@@ -33,5 +32,6 @@ def save_rssTitles(rssTitles):
 
 
 def filter_and_save(rssTitles):
+    print("starting filter_and_save function...")
     save_rssTitles(rssTitles)
     return rssTitles
