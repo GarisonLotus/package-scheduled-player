@@ -43,7 +43,7 @@
     },
     {
         "title": "RSS Feed URL",
-        "ui_width": 15,
+        "ui_width": 12,
         "name": "rssurl",
         "type": "string",
         "doc_link": false,
