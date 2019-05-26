@@ -9,7 +9,6 @@ def main():
 
     # wait till the configuration is non-empty. hosted
     # will restart this process when the configuration changes.
-    cleanup()
     parsedContent = parse(config.rssurl)
     filter_and_save(parsedContent)
     time.sleep(60 * config.poll_interval)
