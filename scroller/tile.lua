@@ -169,6 +169,7 @@ function M.updated_rssTitles_json(rssTitles)
     local items = content.__myself__
     for idx = 1, #rssTitles.texts do
         local item = rssTitles.texts[idx]
+        print(item)
         local color
         if item.color.a ~= 0 then
             color = item.color
