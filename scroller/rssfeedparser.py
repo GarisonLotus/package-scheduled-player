@@ -11,11 +11,17 @@ def parse(url):
     rssTitles = []
     for post in d.entries:
         print("Adding RSS post title: " + post.title)
-        title = {"text": post.title, "color": {"a":0,"b":0,"g":0,"hex":"000000","r":0,"rgba":[0,0,0,0]}, "blink": "false", "show": "true"}
+        title = '{"text": ' + post.title + ', "color": {"a":0,"b":0,"g":0,"hex":"000000","r":0,"rgba":[0,0,0,0]}, "blink": false, "show": true}'
         rssTitles.append(title)
+    print("Here is rssTitles: ")
+    print(rssTitles)
     data = {}
     data['texts'] = rssTitles
-    json_data = json.dumps(data)
+    print("here is pre loads...")
+    print(data)
+    json_data = json.loads(data)
+    print("here is after loads...")
+    print(json_data)
     return json_data
 
 def save_rssTitles(rssTitles):
