@@ -149,6 +149,7 @@ function M.updated_config_json(config)
                 color = color,
             }
         end
+    end
     for idx = 1, #rssTitles.texts do
         local item = rssTitles.texts[idx]
         local color
