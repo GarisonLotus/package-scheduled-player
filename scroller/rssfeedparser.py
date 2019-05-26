@@ -13,8 +13,6 @@ def parse(url):
         print("Adding RSS post title: " + post.title)
         title = '{"text": "' + post.title + '", "color": {"a":0,"b":0,"g":0,"hex":"000000","r":0,"rgba":[0,0,0,0]}, "blink": false, "show": true}'
         rssTitles.append(title)
-    print("Here is rssTitles: ")
-    print(rssTitles)
     data = {}
     data['texts'] = rssTitles
     print("Data being sent to json file:")
