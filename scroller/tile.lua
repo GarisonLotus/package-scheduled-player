@@ -159,7 +159,7 @@ function M.updated_config_json(config)
 end
 
 
-function M.updated_rssTitles_json(rssTitles, config)
+function M.updated_rssTitles_json(config)
     print("starting updated_rssTitles_json block")
     font = resource.load_font(api.localized(config.font.asset_name))
     color = config.color
