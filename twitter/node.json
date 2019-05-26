@@ -48,7 +48,8 @@
             [0, "Do not poll (use bundled tweets)"],
             [2, "2 Minutes"],
             [5, "5 Minutes (default)"],
-            [10, "10 Minutes"]
+            [10, "10 Minutes"],
+            [60, "60 Minutes"]
         ],
         "default": 5
     }, {

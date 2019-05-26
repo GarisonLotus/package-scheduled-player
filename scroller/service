@@ -1,0 +1,19 @@
+#!/usr/bin/python
+import sys
+import time
+from rssfeedparser import filter_and_save, parse
+from hosted import config
+import threading
+
+def main():
+    sleeptime = 60 * config.poll_interval
+    threading.Timer(sleeptime, main).start()
+    config.restart_on_update()
+
+    # wait till the configuration is non-empty. hosted
+    # will restart this process when the configuration changes.
+    parsedContent = parse(config.rssurl)
+    filter_and_save(parsedContent)
+
+if __name__ == '__main__':
+    main()
