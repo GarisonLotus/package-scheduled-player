@@ -1,8 +1,8 @@
 {
     "name": "Scheduled Player w/ RSS Scroller",
-    "author": "Originally from: Florian Wesch <fw@info-beamer.com>. Slight updates from: Garison Draper <gdraper@onica.com>",
+    "author": "Slight updates from: Garison Draper <gdraper@onica.com>",
     "desc": "A schedulable playlist player with custom pages, plugins and animations",
-    "repository": "https://github.com/info-beamer/package-scheduled-player",
+    "repository": "https://github.com/GarisonLotus/package-scheduled-player.git",
     "version": "beta16",
     "lifecycle": "beta",
     "runtime": {
