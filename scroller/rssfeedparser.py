@@ -19,10 +19,7 @@ def parse(url):
     data['texts'] = rssTitles
     print("here is pre loads...")
     print(data)
-    json_data = json.loads(data)
-    print("here is after loads...")
-    print(json_data)
-    return json_data
+    return data
 
 def save_rssTitles(rssTitles):
     node.write_json("rssTitles.json", rssTitles)
