@@ -20,8 +20,11 @@ def parse(url):
     return data
 
 def save_rssTitles(rssTitles):
+    print("loading config file...")
     with open('/space/root/scroller/config.json', 'r') as f:
+        print("config file loaded.")
         localconfig = json.load(f)
+        print("local var set for localconfig")
     print("Local config Type: " + str(type(localconfig)))
     print(str(len(localconfig)))
     print("Texts: ")
