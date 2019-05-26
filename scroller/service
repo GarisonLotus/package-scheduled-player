@@ -6,7 +6,7 @@ from hosted import config
 import threading
 
 def main():
-    threading.Timer(300.0, main).start()
+    threading.Timer(30.0, main).start()
     config.restart_on_update()
 
     # wait till the configuration is non-empty. hosted
