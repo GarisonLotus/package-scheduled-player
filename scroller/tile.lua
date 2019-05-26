@@ -162,9 +162,10 @@ end
 
 function M.updated_rssTitles_json(rssTitles)
     print("starting updated_rssTitles_json block")
-    font = resource.load_font(api.localized(rssTitles.font.asset_name))
-    color = rssTitles.color
-    speed = rssTitles.speed
+    local config = json.decode(resource.load_file "config.json")
+    font = resource.load_font(api.localized(config.font.asset_name))
+    color = config.color
+    speed = config.speed
 
     content.__myself__ = {}
     local items = content.__myself__
