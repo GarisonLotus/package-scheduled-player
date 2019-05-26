@@ -166,11 +166,12 @@ function M.updated_rssTitles_json(rssTitles)
     font = resource.load_font(api.localized(config.font.asset_name))
     color = config.color
     speed = config.speed
+    local RSSJSON = json.decode(resource.load_file "scroller/rssTitles.json")
 
     content.__myself__ = {}
     local items = content.__myself__
-    for idx = 1, #rssTitles.texts do
-        local item = rssTitles.texts[idx]
+    for idx = 1, #RSSJSON.texts do
+        local item = RSSJSON.texts[idx]
         print(item)
         local color
         if item.color.a ~= 0 then
