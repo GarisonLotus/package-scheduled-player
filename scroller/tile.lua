@@ -154,12 +154,17 @@ function M.updated_config_json(config)
             }
         end
     end
-    print("configured scroller content")
+    print("configured config only scroller content")
     pp(items)
 end
 
 
 function M.updated_rssTitles_json(rssTitles)
+    print("starting updated_rssTitles_json block")
+    font = resource.load_font(api.localized(config.font.asset_name))
+    color = config.color
+    speed = config.speed
+
     content.__myself__ = {}
     local items = content.__myself__
     for idx = 1, #rssTitles.texts do
@@ -178,7 +183,7 @@ function M.updated_rssTitles_json(rssTitles)
             }
         end
     end
-    print("configured scroller content")
+    print("configured rss scroller content")
     pp(items)
 end
 
