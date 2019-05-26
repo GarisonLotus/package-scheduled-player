@@ -12,7 +12,7 @@ def parse(url):
     for post in d.entries:
         print("Adding RSS post title: " + post.title)
         title = {"text": post.title, "color": {"a":0,"b":0,"g":0,"hex":"000000","r":0,"rgba":[0,0,0,0]}, "blink": "false", "show": "true"}
-        rssTitles.append(titlecontent)
+        rssTitles.append(title)
     data = {}
     data['texts'] = rssTitles
     json_data = json.dumps(data)
