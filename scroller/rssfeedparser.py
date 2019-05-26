@@ -23,7 +23,7 @@ def parse(url):
 
 def save_rssTitles(rssTitles):
     node.write_json("rssTitles.json", rssTitles)
-    with open('config.json', 'r') as f:
+    with open('/space/root/scroller/config.json', 'r') as f:
         localconfig = json.load(f)
         print("Local config:")
         print(localconfig)
