@@ -14,7 +14,7 @@ def parse(url):
         title = '{"text": "' + post.title + '", "color": {"a":0,"b":0,"g":0,"hex":"000000","r":0,"rgba":[0,0,0,0]}, "blink": false, "show": true}'
         rssTitles.append(title)
     data = {}
-    data['texts'] = rssTitles
+    #data['texts'] = rssTitles  # removed since I'm trying to amend into existing config.json
     print("returning data")
     return data
 

@@ -9,6 +9,7 @@ local speed
 
 local M = {}
 
+-- { source: { text1, text2, text3, ...} }
 local content = {__myself__ = {}}
 
 local function mix_content()
@@ -134,7 +135,6 @@ function M.updated_config_json(config)
     local items = content.__myself__
     for idx = 1, #config.texts do
         local item = config.texts[idx]
-        print(item)
         local color
         if item.color.a ~= 0 then
             color = item.color
@@ -149,7 +149,7 @@ function M.updated_config_json(config)
             }
         end
     end
-    print("configured config only scroller content")
+    print("configured scroller content")
     pp(items)
 end
 
