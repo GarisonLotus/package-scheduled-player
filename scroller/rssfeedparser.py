@@ -20,7 +20,7 @@ def parse(url):
 
 def save_rssTitles(rssTitles):
     print("loading config file...")
-    with open('/space/root/scroller/config.json', 'w') as f:
+    with open('/space/root/scroller/config.json', 'r') as f:
         print("config file loaded.")
         localconfig = json.load(f)
         print("local dict set for localconfig")
@@ -28,11 +28,7 @@ def save_rssTitles(rssTitles):
     localconfig['texts'].update(rssTitles)
     print("json serializing it")
     json = json.dumps(localconfig)
-    print("writing config.json")
-    f.write(json)
-    print("closing the file")
-    f.close()
-    node.write_json("rssTitles.json", rssTitles)
+    node.write_json("config.json", localconfig)
 
 
 def filter_and_save(rssTitles):
