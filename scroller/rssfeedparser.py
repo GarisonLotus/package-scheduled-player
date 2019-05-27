@@ -25,7 +25,7 @@ def save_rssTitles(rssTitles):
         localconfig = json.load(f)
         print("local dict set for localconfig")
     print("adding rssTitles to local dict")
-    localconfig['texts'].update(rssTitles)
+    localconfig['texts'].append(rssTitles)
     node.write_json("config.json", localconfig)
 
 
