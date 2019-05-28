@@ -3,7 +3,7 @@
     "author": "Slight updates from: Garison Draper <gdraper@onica.com>",
     "desc": "A schedulable playlist player with custom pages, plugins and animations",
     "repository": "https://github.com/GarisonLotus/package-scheduled-player.git",
-    "version": "beta16",
+    "version": "garison-beta1",
     "lifecycle": "beta",
     "runtime": {
         "outside_sources": true

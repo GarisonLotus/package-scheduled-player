@@ -6,6 +6,10 @@ This package allows you to create scheduled content with custom animations.
 It will be the default package for all info-beamer customers in the future.
 Right now it's still very much in development.
 
+## Difference in this fork
+
+I have added a quick and dirty RSS feed support to the scroller child. If you set an RSS feed, it will happily add the content to the scroller. There is no way to set the color, blink, or show options for the RSS content. 
+
 ## Configuration Screen
 
 Once you install this package, create a new setup by clicking the **Create Setup** button.
@@ -118,6 +122,10 @@ hosted will offer. Feedback is always welcome: https://info-beamer.com/contact
 
 Got feedback? Don't hesitate to get on contact with info-beamer support here:
 https://info-beamer.com/contact
+
+### Version garison-beta1
+
+* Added quick / dirty RSS feed support to the scroller.
 
 ### Version beta16
 
